@@ -9,14 +9,11 @@ const config = require(__dirname + "/../config/config.json")[env];
 const db = {};
 
 // let sequelize;
-if (config.use_env_variable) {
-  var sequelize = new Sequelize(
-  { username: 'e9knfmd2k4ba4gen',
-    password: 'naanz5czxnhagq96',
-    host: 's54ham9zz83czkff.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    port: '3306',
-    dialect: 'mysql',
-  }, {
+// if(process.env.JAWSDB_URL) {
+  // connection = mysql.createConnection(process.env.JAWSDB_URL);
+// }
+if (process.env.JAWSDB_URL) {
+  var sequelize = new Sequelize(process.env[process.env.JAWSDB_URL], config, {
     timestamps: false
   });
 } else {
