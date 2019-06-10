@@ -15,7 +15,6 @@
     },
     "production": { 
       "use_env_variable": "JAWSDB_URL",
-      "host": "coin4coin.herokuapp.com",
       "dialect": "mysql"
     }
   }
