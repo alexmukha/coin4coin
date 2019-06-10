@@ -1,0 +1,22 @@
+{
+    "development": {
+      "username": "root",
+      "password": "mybootcamp19",
+      "database": "cryptodb",
+      "host": "localhost",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "root",
+      "password": "mybootcamp19",
+      "database": "cryptodb_test",
+      "host": "localhost",
+      "dialect": "mysql"
+    },
+    "production": { 
+      "use_env_variable": "JAWSDB_URL",
+      "host": "coin4coin.herokuapp.com",
+      "dialect": "mysql"
+    }
+  }
+  
