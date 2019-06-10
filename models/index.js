@@ -12,6 +12,10 @@ const db = {};
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable], config, {
     timestamps: false
+  },
+  {
+    host: 's54ham9zz83czkff.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    dialect: 'mysql',
   });
 } else {
   var sequelize = new Sequelize(
