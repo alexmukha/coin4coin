@@ -10,10 +10,11 @@ const db = {};
 
 // let sequelize;
 // if(process.env.JAWSDB_URL) {
-  // connection = mysql.createConnection(process.env.JAWSDB_URL);
+//     connection = mysql.createConnection(process.env.JAWSDB_URL);
 // }
-if (process.env.JAWSDB_URL) {
-  var sequelize = new Sequelize(process.env[process.env.JAWSDB_URL], config, {
+if (config.use_env_variable) {
+  var sequelize = new Sequelize(process.env[config.use_env_variable], config, {
+    dialect: mysql,
     timestamps: false
   });
 } else {
