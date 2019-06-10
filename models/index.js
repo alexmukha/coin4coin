@@ -10,12 +10,14 @@ const db = {};
 
 // let sequelize;
 if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable], config, {
-    timestamps: false
-  },
-  {
+  var sequelize = new Sequelize(
+  { username: 'e9knfmd2k4ba4gen',
+    password: 'naanz5czxnhagq96',
     host: 's54ham9zz83czkff.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    port: '3306',
     dialect: 'mysql',
+  }, {
+    timestamps: false
   });
 } else {
   var sequelize = new Sequelize(
