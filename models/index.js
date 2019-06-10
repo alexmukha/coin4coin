@@ -13,8 +13,7 @@ const db = {};
 //     connection = mysql.createConnection(process.env.JAWSDB_URL);
 // }
 if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable], config, {
-    dialect: mysql,
+  var sequelize = new Sequelize(process.env[config.use_env_variable, config.dialect], config, {
     timestamps: false
   });
 } else {
