@@ -12,7 +12,7 @@ const db = {};
 // if(process.env.JAWSDB_URL) {
 //     connection = mysql.createConnection(process.env.JAWSDB_URL);
 // }
-if (process.env[config.production.use_env_variable]) {
+if (config.production.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.production.use_env_variable, config.production.dialect], config, {
     timestamps: false
   });
