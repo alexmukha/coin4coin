@@ -12,8 +12,8 @@ const db = {};
 // if(process.env.JAWSDB_URL) {
 //     connection = mysql.createConnection(process.env.JAWSDB_URL);
 // }
-if (config.production.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.production.use_env_variable, config.production.dialect], config, {
+if (config.use_env_variable) {
+  var sequelize = new Sequelize(config.use_env_variable, config, {
     timestamps: false
   });
 } else {
